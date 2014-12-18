@@ -69,7 +69,8 @@
     animation-direction: alternate;
 }
 
-.spanExitButton{cursor:crosshair;}
+.spanExitButton{cursor:default;}
+.hideMe {display:none;}
 /* Chrome, Safari, Opera */
 @-webkit-keyframes myfirst {
     from {left: -1110px;}
