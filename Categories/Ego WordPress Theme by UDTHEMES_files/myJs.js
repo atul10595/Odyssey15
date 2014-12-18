@@ -7,7 +7,31 @@ jQuery(document).ready(function($){
     $mL = $(".modalL");
     $mR = $(".modalR");
     
-    var rulesID523 = ["ONE","Rule2 Rule2"];
+    var rulesID523 = [
+        "ONE",
+        "Rule2 Rule2 Rule2 Rule2 Rule2 Rule2 Rule2 Rule2 Rule2 Rule2 Rule2 Rule2 Rule2 Rule2 Rule2 Rule2 Rule2 Rule2 ONE aplhja beta amma",
+        "Rule 3",
+        "ONE",
+        "Rule2 Rule2",
+        "Rule 3",
+        "ONE",
+        "Rule2 Rule2",
+        "Rule 3",
+        "ONE",
+        "Rule2 Rule2",
+        "Rule 3",
+        "ONE",
+        "Rule2 Rule2",
+        "Rule 3",
+        "Rule2 Rule2",
+        "Rule 3",
+        "ONE",
+        "Rule2 Rule2",
+        "Rule 3",
+        "ONE",
+        "Rule2 Rule2",
+        "Rule 3"
+    ];
     
      $cross = $(".spanExitButton");
     $cross.addClass("hideMe");
@@ -23,7 +47,7 @@ jQuery(document).ready(function($){
             //alert(rulesID523.length);
             for(i=0;i<rulesID523.length;)
             {
-                $list.find("li:nth-of-type("+(i+1)+")").text(rulesID523[i]);
+                $list.append("<li>"+rulesID523[i]+"</li>");
                 i++;
             }
         }

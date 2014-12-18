@@ -22,9 +22,11 @@
         
         
     }
+
 .modalL > div {position: relative; padding: 10px;}
-.modalL  ol { position: absolute; display: block;width: 650px;height:500px; margin-left:15px;}
-.modalL li {text-align: center;padding: 10px 5px;width: 100%;}
+.modalL  ol {   overflow-y:scroll;overflow-x: hidden; word-wrap: break-word;
+position: absolute; display: block;width: 720px;height:540px; margin-left:15px;}
+.modalL li {text-align: center;padding: 10px 5px;width: 100%;list-style: decimal-leading-zero;}
 .modalR{
     border-radius: 100%;
     left: 1500px;
