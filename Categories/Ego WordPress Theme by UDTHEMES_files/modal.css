@@ -1,0 +1,119 @@
+
+.modal{
+            display:inline-block;
+            top:5%;
+    
+            position: fixed;
+            
+            z-index: 999;
+            width: 600px;
+            height: 600px;
+               
+    
+        }
+    .modalL{
+       left: -1100px;
+        width: 750px;
+        background-color: white;
+        
+        text-align: center;
+        
+        
+    }
+.modalL > div {position: relative; padding: 10px;}
+.modalL  ol { position: absolute; display: block;width: 650px;height:500px; margin-left:15px;}
+.modalL li {text-align: center;padding: 10px 5px;width: 100%;}
+.modalR{
+    border-radius: 100%;
+    left: 1500px;
+    background: url('./slide-122.jpg') no-repeat ;
+    background-position: center;
+    background-size: 100% 100%;
+    
+    background-color:#ffbada;
+}
+
+@media screen and (max-width: 800px) {
+    .modal {
+        margin-left:-90px;
+     
+    }
+     .modalR {
+         margin-top:500px;
+     }
+}
+#wrapper{overflow: hidden;}
+.animL {
+    -webkit-animation: myfirst 2s; /* Chrome, Safari, Opera */
+    animation: myfirst 2s;
+    -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards;
+}
+
+.animR {
+    -webkit-animation: mysecond 1.5s;/*  Chrome, Safari, Opera */
+    animation: mysecond 1.5s;
+    -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards;
+}
+
+.animLL{
+ -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+    animation-direction: alternate;
+
+}
+
+
+.animRR{
+ -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+    animation-direction: alternate;
+}
+
+.spanExitButton{cursor:crosshair;}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+    from {left: -1110px;}
+    to {left: 28px;}
+}
+
+.lightsDim{
+     -webkit-animation: lightsOff 1.5s;/*  Chrome, Safari, Opera */
+    animation: lightsOff 1.5s;
+    -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes lightsOff {
+    from {opacity:1;}
+    to {opacity:0.5;}
+}
+
+@-webkit-keyframes lightsOff {
+   from {opacity:1;}
+    to {opacity:0.5;}
+}
+
+/* Standard syntax */
+@keyframes myfirst {
+    from {left: -1110px;}
+    to {left: 28px}
+}
+
+
+@-webkit-keyframes mysecond {
+    from {left: 1500px;}
+    to {left: 710px}
+}
+
+/* Standard syntax */
+@keyframes mysecond {
+    from {left: 1500px;}
+    to {left: 710}
+}
+
+
+
+#footer{
+margin-top:300px !important;
+}

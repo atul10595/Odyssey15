@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Odyssey'15 | Lifestyle</title>
+<link rel="stylesheet" href="http://demos.udthemes.com/ego/wordpress/index-css/style.css">
+<!--<script type="text/javascript" async="" src="./Ego WordPress Theme by UDTHEMES_files/ga.js"></script>-->
+    
+    <script src="./Ego WordPress Theme by UDTHEMES_files/jquery.min.js"></script>
+<!--    <style type="text/css"></style>-->
+<script>
+
+function breakIframe() {
+	if(navigator.userAgent.toLowerCase().match(/(iphone|ipod|ipad|android)/)) {
+		var mob_url = 'http://demos.udthemes.com/ego/wordpress/mobile-index.php';
+		window.location = mob_url;
+	}
+	if ( window.location != window.parent.location ) {
+		top.location = self.location.href;
+	}
+}
+
+//function to fix height of iframe!
+var calcHeight = function() {
+	var headerDimensions = $('#header-bar').height();
+	$('#preview-frame').height($(window).height() - headerDimensions);
+}
+
+function activateDemoMenu(){
+	$("#demo-select li ul").css({display: "none"});
+	$("#demo-select li").hover(function(){
+		$(this).find('ul:first').stop().fadeTo(200,1, function() { $(this).css({display:'block'}) });
+	},function(){
+		$(this).find('ul:first').stop().fadeTo(500,0, function() { $(this).css({display:'none'}) });
+	});
+}
+
+function activateProductMenu(){
+	$("#product-select li ul").css({display: "none"});
+	$("#product-select li").hover(function(){
+		$(this).find('ul').stop().fadeTo(200,1, function() { $(this).css({display:'block'}) });
+	},function(){
+		$(this).find('ul').stop().fadeTo(500,0, function() { $(this).css({display:'none'}) });
+	});
+}
+
+$(document).ready(function() {
+	breakIframe();
+	calcHeight();
+	activateDemoMenu();
+	activateProductMenu();
+
+	$('.close-button').click(function() {
+		window.location = $('#preview-frame').attr('src');
+		return false;
+	});
+
+	$('#demo-select ul li a').click(function() {
+		$('#preview-frame').attr('src', $(this).attr('href'));
+		$('#demo-select .demo-select').html('<img src="index-img/ajax-loader.gif" style="float:left; display:block; margin-top:6px;">');
+		$('#demo-select li a').each(function() { $(this).removeClass('active'); });
+		$(this).addClass('active');
+		return false;
+	});
+
+	$('#preview-frame').load(function() { $('#demo-select .demo-select').html('Select Demo'); });
+
+	$('.product-select, .demo-select').click(function() {
+		return false;
+	});
+
+});
+
+$(window).resize(function() {
+	calcHeight();
+}).load(function() {
+	calcHeight();
+});
+
+</script>
+
+</head>
+<body>
+	<iframe id="preview-frame" src="./Ego WordPress Theme by UDTHEMES_files/saved_resource.html" name="preview-frame" frameborder="0" noresize="noresize" style="height: 550px;">
+   </iframe>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-53041772-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</body></html>
