@@ -1,4 +1,6 @@
 
+.round-thumb > a{cursor: crosshair !important;}
+ 
 .modal{
             display:inline-block;
             top:5%;
