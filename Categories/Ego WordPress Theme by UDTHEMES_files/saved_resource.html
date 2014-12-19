@@ -93,7 +93,7 @@
 
 
 
-        <embed src="Music/dance.mp3" autostart=true loop=true style="height:0;width:0;display:hidden;"></embed>
+        <!--<embed src="Music/dance.mp3" autostart=true loop=true style="height:0;width:0;display:hidden;"></embed>-->
         <!--start wrapper-->
         <div id="wrapper" style="display: block;">
 
@@ -124,7 +124,7 @@
 
                     <div class="column_one_third last" style="margin-left:16em">
                         <div class="round-thumb-container " style="width:250px; max-width:100%; margin:auto;">
-                            <div class="round-thumb lightbox">
+                            <div class="round-thumb lightbox" id="battletroupe"> <!-- add event name here in -->
                                 <a title="Event Type" class="lightbox" href="#">
                                     <img src="person-2.jpg" alt="" href="#">
                                 </a>
@@ -141,7 +141,7 @@
 
                     <div class="column_one_third last">
                         <div class="round-thumb-container " style="width:250px; max-width:100%; margin:auto;">
-                            <div class="round-thumb lightbox" id="535">
+                            <div class="round-thumb lightbox" id="verve">  <!-- add event name here in -->
                                 <a title="Event Type" class="lightbox" href="#">
                                     <img src="person-3.jpg" alt="">
                                 </a>
@@ -313,11 +313,12 @@ Contact Person: John Adams
             <div class="bgRules"></div>
             <div class="rulebook nano" >
                 <br>
-                <ol class="orderedList nano-content"><strong style="font-size:20px;font-weight:600;"><br>RULES</strong>
+                <ol class="orderedList nano-content">
                 </ol>
             </div>
+            <span class="spanExitButton" >&#215;</span>
         </div>
-        <div class="modalR modal"><span class="spanExitButton" >&#215;</span>
+        <div class="modalR modal"><div class=" bgRulesForModalR"></div>
         </div>
         <!--start footer-->
         <div id="footer" style="display: block;">

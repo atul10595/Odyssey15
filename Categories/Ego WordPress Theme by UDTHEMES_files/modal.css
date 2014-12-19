@@ -1,16 +1,21 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600);
  .round-thumb > a {}
+#wrapper{cursor: default;}
 
+.noscroll{
+    
+    overflow:hidden;
+}
 .modal {
     display: inline-block;
     top: 5%;
     position: fixed;
     font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    z-index: 999;
+    font-weight: 300;
+    z-index: 888;
     width: 600px;
     height: 600px;
-    box-shadow: 0px 0px 1px 0px #fff;
+    box-shadow: 0px 0px 7px 2px #000;
 }
 .modalL {
     left: -1100px;
@@ -19,28 +24,8 @@
     text-align: center;
     background-color: rgba(0, 0, 0, 1);
 }
-.rulebook {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px;
-    width: 97.5%;
-    height: 97.5%;
-    color: rgba(255, 255, 255, 1);
-}
-.bgRules {
-    width: 100%;
-    height: 100%;
-    background: no-repeat;
-    background-position: center;
-    background-size: 200% 200%;
-    -ms-filter: "alpha(opacity=20)";
-    filter: alpha(opacity=20);
-    filter: progid: DXImageTransform.Microsoft.Alpha(opacity=0.2);
-    opacity: .20;
-}
+
 .modalL ol {
-    list-style: decimal;
     overflow-y: scroll;
     overflow-x: hidden;
     word-wrap: break-word;
@@ -52,9 +37,11 @@
 }
 .nano .nano-pane {
     background: #aaa;
+    
 }
 .nano .nano-slider {
     background: #888;
+    
 }
 .rulebook ol li {
     width: 100%;
@@ -64,14 +51,87 @@
     width: 100%;
     text-align: left;
 }
-.modalR {
-    border-radius: 100%;
-    left: 1500px;
-    background: url('./slide-122.jpg') no-repeat;
+.rulebook {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    width: 97.5%;
+    height: 96.6%;
+    color: rgba(255, 255, 255, 1);
+}
+.bgRules {
+    width: 100%;
+    height: 100%;
+    background: no-repeat;
     background-position: center;
     background-size: 100% 100%;
-    background-color: #ffbada;
+    -ms-filter: "alpha(opacity=20)";
+    filter: alpha(opacity=20);
+    filter: progid: DXImageTransform.Microsoft.Alpha(opacity=0.2);
+    opacity: .20;
+    
+    
+
+   
 }
+
+.modalR {
+    border-radius: 100%;
+    left: 1580px;
+    background-color: #000;
+    background-position: center;
+    
+    overflow: hidden;
+
+
+}
+.bgRulesForModalR{
+    width: 200%;
+    height: 200%;
+    background: no-repeat;
+    
+    top:-50px;  
+    background-position: center;
+    position: absolute;
+     -webkit-animation: zoomInOut ;
+    animation: zoomInOut ;
+    animation-duration: 24s;
+    -webkit-animation-duration: 24s;
+    animation-iteration-count:  infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+
+}
+
+
+
+@-webkit-keyframes zoomInOut {
+        0% {
+        margin-left:-50px;
+    }
+    50% {
+        margin-left:-230px;
+    }
+    100% {
+        margin-left:-50px;
+    }
+}
+/* Standard syntax */
+
+@keyframes zoomInOut {
+          0% {
+        margin-left:-50px;
+    }
+    50% {
+        margin-left:-230px;
+    }
+    100% {
+        margin-left:-50px;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .modal {
         margin-left: -90px;
@@ -90,6 +150,8 @@
     -webkit-animation-fill-mode: forwards;
     /* Chrome, Safari, Opera */
     animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.17,.67,.83,.67);
+    -webkit-animation-timing-function:bezier(.17,.67,.83,.67);
 }
 .animR {
     -webkit-animation: mysecond 1.5s;
@@ -110,13 +172,20 @@
     animation-direction: alternate;
 }
 .spanExitButton {
+    
+    position: relative;
+    bottom:587px;
+    left:-345px;
+    z-index: 9999;
     cursor: default;
     font-size: 50px;
     color: white;
-    margin-top: 10px;
-    margin-left: 25px;
-    position: absolute;
+    
+    margin-left: 5px;
     font-weight: 100;
+}
+.spanExitButton:hover{
+    font-size: 60px;
 }
 .hideMe {
     display: none;
@@ -140,6 +209,8 @@
     /* Chrome, Safari, Opera */
     animation-fill-mode: forwards;
 }
+
+
 @keyframes lightsOff {
     from {
         opacity: 1;
@@ -163,7 +234,7 @@
         left: -1110px;
     }
     to {
-        left: 28px
+        left: 28px;
     }
 }
 @-webkit-keyframes mysecond {
@@ -171,7 +242,7 @@
         left: 1500px;
     }
     to {
-        left: 710px
+        left: 710px;
     }
 }
 /* Standard syntax */
@@ -184,6 +255,9 @@
         left: 710
     }
 }
+
+
+
 #footer {
     margin-top: 300px !important;
 }
